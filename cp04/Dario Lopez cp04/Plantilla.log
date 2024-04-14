@@ -1,0 +1,998 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.17)  22 FEB 2024 13:37
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex"
+(/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex
+LaTeX2e <2021-11-15> patch level 1
+L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count193
+\l__pdf_internal_box=\box50
+) (./Plantilla.aux)
+\openout1 = `Plantilla.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 10.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 10.
+
+Overfull \hbox (27.5429pt too wide) in paragraph at lines 16--17
+[]\OT1/cmr/m/n/12 Estas nor-mas son am-pli-a-mente uti-lizadas en difer-entes ^^Sareas de las matem^^Saticas
+ []
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (0.6205pt too wide) in paragraph at lines 40--42
+\OT1/cmr/m/n/12 Como $\OMS/cmsy/m/n/12 jj\OML/cmm/m/it/12 Ax\OMS/cmsy/m/n/12 jj \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 jj\OML/cmm/m/it/12 b\OMS/cmsy/m/n/12 jj$ \OT1/cmr/m/n/12 en-tonces $\OMS/cmsy/m/n/12 jj\OML/cmm/m/it/12 b\OMS/cmsy/m/n/12 jj ^^T jj\OML/cmm/m/it/12 A\OMS/cmsy/m/n/12 jjjj\OML/cmm/m/it/12 x\OMS/cmsy/m/n/12 jj$ \OT1/cmr/m/n/12 y como pode-mos es-cribir tambi^^Sen
+ []
+
+[2]
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:78: LaTeX Error: Environment bmatrix undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78 A = \begin{bmatrix}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:79: Misplaced alignment tab character &.
+l.79 4 &
+         -3 & 6 & 8 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:79: Misplaced alignment tab character &.
+l.79 4 & -3 &
+              6 & 8 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:79: Misplaced alignment tab character &.
+l.79 4 & -3 & 6 &
+                  8 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:80: Misplaced alignment tab character &.
+l.80 1 &
+         -2 & 7 & 9 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:80: Misplaced alignment tab character &.
+l.80 1 & -2 &
+              7 & 9 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:80: Misplaced alignment tab character &.
+l.80 1 & -2 & 7 &
+                  9 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:81: Misplaced alignment tab character &.
+l.81 5 &
+         8 & 9 & -4 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:81: Misplaced alignment tab character &.
+l.81 5 & 8 &
+             9 & -4 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:81: Misplaced alignment tab character &.
+l.81 5 & 8 & 9 &
+                 -4 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:82: Misplaced alignment tab character &.
+l.82 3 &
+         2 & 7 & 1 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:82: Misplaced alignment tab character &.
+l.82 3 & 2 &
+             7 & 1 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:82: Misplaced alignment tab character &.
+l.82 3 & 2 & 7 &
+                 1 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:83: LaTeX Error: \begin{document} ended by \end{bmatrix}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.83 \end{bmatrix}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:88: LaTeX Error: Environment equation* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 \begin{equation*}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:89: LaTeX Error: Environment bmatrix undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.89 U = \begin{bmatrix}
+                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:90: Misplaced alignment tab character &.
+l.90 0.3713 &
+              -0.5760 & -0.3679 & -0.6420 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:90: Misplaced alignment tab character &.
+l.90 0.3713 & -0.5760 &
+                        -0.3679 & -0.6420 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:90: Misplaced alignment tab character &.
+l.90 0.3713 & -0.5760 & -0.3679 &
+                                  -0.6420 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:91: Misplaced alignment tab character &.
+l.91 0.5688 &
+              -0.1602 & 0.8105 & -0.0128 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:91: Misplaced alignment tab character &.
+l.91 0.5688 & -0.1602 &
+                        0.8105 & -0.0128 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:91: Misplaced alignment tab character &.
+l.91 0.5688 & -0.1602 & 0.8105 &
+                                 -0.0128 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:92: Misplaced alignment tab character &.
+l.92 -0.6055 &
+               -0.7877 & 0.1047 & 0.0669 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:92: Misplaced alignment tab character &.
+l.92 -0.6055 & -0.7877 &
+                         0.1047 & 0.0669 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:92: Misplaced alignment tab character &.
+l.92 -0.6055 & -0.7877 & 0.1047 &
+                                  0.0669 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:93: Misplaced alignment tab character &.
+l.93 -0.3986 &
+               0.1588 & 0.4448 & -0.7942 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:93: Misplaced alignment tab character &.
+l.93 -0.3986 & 0.1588 &
+                        0.4448 & -0.7942 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:93: Misplaced alignment tab character &.
+l.93 -0.3986 & 0.1588 & 0.4448 &
+                                 -0.7942 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:94: LaTeX Error: \begin{document} ended by \end{bmatrix}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.94 \end{bmatrix}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:95: LaTeX Error: \begin{document} ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.95 \end{equation*}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--96
+
+ []
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:97: LaTeX Error: Environment equation* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.97 \begin{equation*}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:98: Missing $ inserted.
+<inserted text> 
+                $
+l.98 \Sigma
+            = \begin{bmatrix}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:98: LaTeX Error: Environment bmatrix undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.98 \Sigma = \begin{bmatrix}
+                             
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:99: Misplaced alignment tab character &.
+l.99 20.8745 &
+               0 & 0 & 0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:99: Misplaced alignment tab character &.
+l.99 20.8745 & 0 &
+                   0 & 0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:99: Misplaced alignment tab character &.
+l.99 20.8745 & 0 & 0 &
+                       0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:100: Misplaced alignment tab character &.
+l.100 0 &
+          10.5091 & 0 & 0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:100: Misplaced alignment tab character &.
+l.100 0 & 10.5091 &
+                    0 & 0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:100: Misplaced alignment tab character &.
+l.100 0 & 10.5091 & 0 &
+                        0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:101: Misplaced alignment tab character &.
+l.101 0 &
+          0 & 9.4213 & 0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:101: Misplaced alignment tab character &.
+l.101 0 & 0 &
+              9.4213 & 0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:101: Misplaced alignment tab character &.
+l.101 0 & 0 & 9.4213 &
+                       0 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:102: Misplaced alignment tab character &.
+l.102 0 &
+          0 & 0 & 2.3449 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:102: Misplaced alignment tab character &.
+l.102 0 & 0 &
+              0 & 2.3449 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:102: Misplaced alignment tab character &.
+l.102 0 & 0 & 0 &
+                  2.3449 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:103: LaTeX Error: \begin{document} ended by \end{bmatrix}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.103 \end{bmatrix}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:104: LaTeX Error: \begin{document} ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.104 \end{equation*}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:104: Missing $ inserted.
+<inserted text> 
+                $
+l.104 \end{equation*}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--105
+
+ []
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:106: LaTeX Error: Environment equation* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.106 \begin{equation*}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:107: Missing $ inserted.
+<inserted text> 
+                $
+l.107 V^
+        T = \begin{bmatrix}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:107: LaTeX Error: Environment bmatrix undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107 V^T = \begin{bmatrix}
+                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:108: Misplaced alignment tab character &.
+l.108 0.5260 &
+               -0.4737 & 0.6214 & -0.3428 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:108: Misplaced alignment tab character &.
+l.108 0.5260 & -0.4737 &
+                         0.6214 & -0.3428 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:108: Misplaced alignment tab character &.
+l.108 0.5260 & -0.4737 & 0.6214 &
+                                  -0.3428 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:109: Misplaced alignment tab character &.
+l.109 0.0832 &
+               -0.7426 & -0.5786 & -0.3188 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:109: Misplaced alignment tab character &.
+l.109 0.0832 & -0.7426 &
+                         -0.5786 & -0.3188 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:109: Misplaced alignment tab character &.
+l.109 0.0832 & -0.7426 & -0.5786 &
+                                   -0.3188 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:110: Misplaced alignment tab character &.
+l.110 0.7674 &
+               0.4809 & -0.2532 & -0.3338 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:110: Misplaced alignment tab character &.
+l.110 0.7674 & 0.4809 &
+                        -0.2532 & -0.3338 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:110: Misplaced alignment tab character &.
+l.110 0.7674 & 0.4809 & -0.2532 &
+                                  -0.3338 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:111: Misplaced alignment tab character &.
+l.111 -0.3506 &
+                -0.1783 & -0.4694 & -0.7714 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:111: Misplaced alignment tab character &.
+l.111 -0.3506 & -0.1783 &
+                          -0.4694 & -0.7714 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:111: Misplaced alignment tab character &.
+l.111 -0.3506 & -0.1783 & -0.4694 &
+                                    -0.7714 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:112: LaTeX Error: \begin{document} ended by \end{bmatrix}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.112 \end{bmatrix}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:113: LaTeX Error: \begin{document} ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 \end{equation*}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:113: Missing $ inserted.
+<inserted text> 
+                $
+l.113 \end{equation*}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--114
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:120: LaTeX Error: Environment equation* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.120 \begin{equation*}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:121: Missing $ inserted.
+<inserted text> 
+                $
+l.121 A^
+        {-1} = \begin{bmatrix}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:121: LaTeX Error: Environment bmatrix undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.121 A^{-1} = \begin{bmatrix}
+                              
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:122: Misplaced alignment tab character &.
+l.122  0.088 &
+               0.088 & -0.272 & 0.152 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:122: Misplaced alignment tab character &.
+l.122  0.088 & 0.088 &
+                       -0.272 & 0.152 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:122: Misplaced alignment tab character &.
+l.122  0.088 & 0.088 & -0.272 &
+                                0.152 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:123: Misplaced alignment tab character &.
+l.123  0.216 &
+               -0.084 & -0.120 & -0.028 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:123: Misplaced alignment tab character &.
+l.123  0.216 & -0.084 &
+                        -0.120 & -0.028 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:123: Misplaced alignment tab character &.
+l.123  0.216 & -0.084 & -0.120 &
+                                 -0.028 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:124: Misplaced alignment tab character &.
+l.124  -0.176 &
+                0.136 & 0.240 & 0.008 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:124: Misplaced alignment tab character &.
+l.124  -0.176 & 0.136 &
+                        0.240 & 0.008 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:124: Misplaced alignment tab character &.
+l.124  -0.176 & 0.136 & 0.240 &
+                                0.008 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:125: Misplaced alignment tab character &.
+l.125  -0.040 &
+                -0.152 & 0.064 & -0.024 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:125: Misplaced alignment tab character &.
+l.125  -0.040 & -0.152 &
+                         0.064 & -0.024 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:125: Misplaced alignment tab character &.
+l.125  -0.040 & -0.152 & 0.064 &
+                                 -0.024 \\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:126: LaTeX Error: \begin{document} ended by \end{bmatrix}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.126 \end{bmatrix}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:127: LaTeX Error: \begin{document} ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.127 \end{equation*}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/home/dario/Desktop/Numerica/cp04/Dario Lopez cp04/Plantilla.tex:127: Missing $ inserted.
+<inserted text> 
+                $
+l.127 \end{equation*}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--128
+
+ []
+
+No file Plantilla.bbl.
+[4] (./Plantilla.aux) ) 
+Here is how much of TeX's memory you used:
+ 433 strings out of 480185
+ 7935 string characters out of 5894213
+ 300741 words of memory out of 5000000
+ 18455 multiletter control sequences out of 15000+600000
+ 472601 words of font info for 39 fonts, out of 8000000 for 9000
+ 40 hyphenation exceptions out of 8191
+ 33i,6n,38p,544b,107s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on Plantilla.pdf (4 pages, 102503 bytes).
+PDF statistics:
+ 62 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

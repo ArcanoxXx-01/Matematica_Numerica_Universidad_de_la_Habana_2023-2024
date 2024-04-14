@@ -1,0 +1,143 @@
+\documentclass[a4paper,12pt]{article}
+
+\begin{document}
+\title{CP: 0e100000000000000}
+\author{Dario Lopez Falcon}
+\date{Enero, 2024}
+\maketitle
+
+\section{Ejercicio 1}
+\subsection*{Escribe los siguientes números utilizando exactamente la cantidad de caracteres indicados, de
+forma que se puedan reconocer como números en el lenguaje de programación de su preferencia2.}
+
+a) 4500000, con 4 caracteres: 45e5
+
+b) -1230000, con 6 caracteres: -123e4
+
+c) 0.000000123, con 6 caracteres: 123e-9
+
+d) 1, con 4 caracteres: -1+2 XD 1e-0
+
+\section*{Ejercicio 2}
+En el lenguaje de programación de su preferencia:
+
+\subsection*{ a)Diga cúales de estas igualdades (o desigualdades) son verdaderas}
+
+a) 0.4 * 6 $>$ 2.4 Verdadero si se hace con 0.4 (double) y Falso si se hace con 0.4f (float)
+
+
+b) 0.8 * 3 == 0.3 * 8  Para 0.8 y 0.3 como double es Falso mientras que si son float es Verdadero.
+
+c) 0.3 * 3 == 0.9 siempre Falso
+
+d ) 3.1 * 2  $<$ 6.2 siempre Falso
+
+e) 1e100 + 1e50 == 1e100 Verdadero :(
+
+\subsection*{ b) Determine cuál es el menor valor natural N para el cual se cumple que:}
+1e100 + 10N >1e100.  El menor es 9713344461128646e67 no pude ser mas preciso :(
+
+\subsection*{c) En algunos lenguajes de programación, como C\# o C, es muy fácil trabajar
+con distintos tipos de números, por ejemplo, float y double. Resuelva el siguiente ejercicio
+para el tipo de datos float y para el tipo de datos double:
+}
+1e24 + 10N >1e24 El menor es 6710887
+
+\subsection*{d) ¿Qué ocurre si se trata de resolver el inciso b) con el tipo de dato float?}
+
+El menor seria 34028235931503486209399819845154897921f que es MUCHO menor que 9713344461128646e67
+
+\section*{Ejercicio 3}
+\subsection*{El objetivo de este ejercicio es tener una primera familiarización con el lenguaje de programaci´on
+Python, y una buena forma de hacerlo es implementado algo que sea fácil, por ejemplo, el factorial
+de un número :-D. Por eso, lo que hay que hacer es una función en Python que reciba un número
+entero y devuelva su factorial. Para ello:}
+
+a) Haga una implementacion recursiva.
+
+b) Haga una implementacion iterativa.
+
+c) Haga una implementacion que use la funcion Gamma que esta implementada
+en el modulo scipy.
+
+d) Escriba una variante de la version iterativa en la que, aunque el usuario
+pase el argumento como entero, los calculos se realicen con numeros flotantes3
+
+e) ¿A partir de que valor de N los resultados de la variante con enteros es
+distinta de la variante con flotantes? 
+
+R/ A partir de 79
+
+\section*{Ejercicio 4}
+a) Implemente en Python una funcion que devuelva una aproximacion de la derivada de una
+funcion dada, en un punto x usando un parametro h. La funcion implementada debe recibir
+tres argumentos f, x, y h, donde f es una funcion f : R → R implementada en Python, x
+es un numero real donde se quiere aproximar la derivada de f , y h es el valor del parametro
+presente en la aproximacion propuesta.
+
+b) Verifique el buen funcionamiento de su implementacion aproximando la derivada de la funcion
+f (x) = x2, en el punto x = 1, con varios valores de h.
+
+c) ¿Para que valor de h se obtienen los mejores resultados en el inciso anterior?
+
+R/Para h=1e-8
+
+\section*{Ejercicio 5}
+\subsection*{a) ¿Como se llama esta forma de aproximar una funcion?6}
+
+R/ Serie de Taylor o Polinomio de Taylor
+
+\subsection*{b) ¿Cual es la expresion general para este tipo de aproximacion?}
+
+R/ La misma que el enunciado pero sumando como n-esimo termino o(Xo) que seria o pequeña de Xo
+
+\subsection*{c) Calcule el desarrollo en serie de Taylor de las siguientes funciones, si se desarrollan
+alrededor del punto x0 = 0:}
+
+a) f (x) = ex 
+
+b) f (x) = sen(x)
+
+c) f (x) = x5 + 6x3 - 4x2 + 5
+
+\section*{Ejercicio sorpresa}
+¿Como se puede saber si la aproximacion con un valor de h es mejor que con otro?
+
+R/ Matematicamente mientras menor sea el h es mas exacto el resultado
+
+\section*{Ejercicio 7}
+\subsection*{La derivada de una funcion f : R → R se puede aproximar de varias formas. Algunas de ellas son:}
+
+Poner las ecuaciones (1) y (2)
+
+Tomando como ejemplo las funciones f1(x) = x2 y f2(x) = x3, responda las siguientes preguntas:
+
+a) Si se usa un valor de h = 0,1 en las aproximaciones (1) y (2) para calcular las derivadas de
+f1 y f2 en el punto ¯x = 1, ¿exactamente que error se comete en cada caso?
+
+R/Con el primer metodo de derivacion f1 tuvo un error de 2e-15 y f2 tuvo 4e-15
+
+R/Con el segundo metodo de derivacion f1 tuvo un error de 4e-16 y f2 tuvo 16e-16
+
+\section*{Ejercicio 10}
+\subsection*{a)}
+R/Al parecer es cierto (al menos si se cumplio con la implementacion que hice) :)
+\subsection*{b)}
+R/Es cierto que funciona pero no es la forma correcta de hacerlo ,a demas si en vez de 
+hacer 70 iteraciones hacemos menos ejemplo 10 no cumple
+\subsection*{c)}
+R/ Es cierto , en las computadoras la suma no es asociatica y lo podemos comprobar muy facil 
+haciendo:
+
+a=1e100+1e83+1e83+1e83+1e83+1e83+1e83+1e83+1e83+1e83+1e83
+
+b=1e83+1e83+1e83+1e83+1e83+1e83+1e83+1e83+1e83+1e83+1e100
+
+print(a==b)\#nos va a devolver false
+
+\section*{Ejercicio 12}
+\subsection*{Utilizar el metodo de Monte Carlo para aproximar el valor de $\pi$ (100000 boniatos)}
+
+
+\bibliography{bibliography}
+\end{document}

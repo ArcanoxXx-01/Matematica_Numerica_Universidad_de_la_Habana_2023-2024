@@ -1,0 +1,134 @@
+\documentclass[a4paper,12pt]{article}
+
+\begin{document}
+\title{CP: 4}
+\author{Dario Lopez Falcon}
+\date{febrero, 2024}
+\section*{Pregunta 1}
+Por supuesto, aquí tienes la descripción de tres normas matriciales adicionales:
+
+1. Norma Uno (o norma de columna): También conocida como norma de Manhattan o norma \( L^1 \), esta norma se define como la suma de los valores absolutos de los elementos de cada columna, tomando el máximo de esas sumas. En otras palabras, si \( A \) es una matriz con elementos \( a_{ij} \), entonces la norma uno de \( A \) se calcula como el máximo de la suma de \( |a_{ij}| \) para cada columna \( j \).
+
+2. Norma Euclidiana (o norma dos): Esta norma, también conocida como norma \( L^2 \), se basa en el concepto de distancia euclidiana en el espacio vectorial. Se define como la raíz cuadrada de la suma de los cuadrados de todos los elementos de la matriz. Es decir, si \( A \) es una matriz con elementos \( a_{ij} \), entonces la norma euclidiana de \( A \) se calcula como la raíz cuadrada de la suma de \( a_{ij}^2 \) para todos los \( i \) y \( j \).
+
+3. Norma del infinito (o norma de máximo valor absoluto): Esta norma se define como el máximo valor absoluto de los elementos de la matriz. Es decir, si \( A \) es una matriz con elementos \( a_{ij} \), entonces la norma del infinito de \( A \) se calcula como el máximo de \( |a_{ij}| \) para todos los \( i \) y \( j \).
+
+Estas normas son ampliamente utilizadas en diferentes áreas de las matemáticas y la ciencia, cada una con sus propias propiedades y aplicaciones específicas.
+\section*{Pregunta 2}
+a) $||A||_1 = 29$
+b) $||A||_2 = 22.5610283454$
+c) $||A||_\infty = 26$
+d) Usaremos la norma del máximo absoluto.
+$||A|| = 9$
+
+\section*{Pregunta 3}
+
+b)Demostremos que $cond(A) \geq 1$
+Usando que $cond(A) = ||A|| ||A^{-1}|| $
+\[cond(A) = ||A|| ||A^{-1}|| \geq ||A A^{-1}||= 1 \]
+
+\section*{Pregunta 4}
+a) Conociendo que $r = b - A\overline{x}$ (1) y además $b = A x$
+si sustituimos en (1) tendremos $r = A x - A\overline{x} = A (x - \overline{x}) = A e$(2) pues $e = x - \overline{x}$.
+Además si multiplicamos (2) por $A^{-1}$ por la izquierda $e = A^{-1} r$
+
+b) Como $||e|| = ||A^{-1} r||$ y además $||r|| = ||A e||\leq ||A|| ||e|| $ entonces $\frac{||r||}{||A||} \leq ||e||$
+
+Entonces sustituyendo tendríamos:
+\[\frac{||r||}{||A||} \leq ||e|| = ||A^{-1} r|| \leq ||A^{-1}|||| r||\]
+Dividiendo por $||x||$ los tres miembros de la desigualdad y multiplicando y dividiendo por $||b||$ agrupamos convenientemente y obtenemos
+\[ \frac{||b||}{||A||||x||} \frac{||r||}{||b||} \leq \frac{||e||}{||x||} \leq \frac{||A^{-1}||||b||}{||x||} \frac{||r||}{||b||}\]
+Como $||A x|| = ||b||$ entonces $||b|| \leq ||A|| ||x||$ y como podemos escribir también $||x|| = ||A^{-1} b||$ entonces tendremos la siguiente desigualdad para $||x||$
+\[\frac{||b||}{||A||}\leq ||x|| \leq ||A^{-1}|||| b||\]
+Concluimos haciendo uso de la desigualdad anterior en que 
+\[\frac{1}{||A||||A^{-1}||} \frac{||r||}{||b||} \leq \frac{||e||}{||x||} \leq ||A||||A^{-1}||\frac{||r||}{||b||}\]
+y precisamente como $cond(A) =||A||||A^{-1}||$
+\[ \frac{1}{cond(A)} \frac{||r||}{||b||} \leq \frac{||e||}{||x||} \leq cond(A)\frac{||r||}{||b||}\]
+
+\section*{Pregunta 5}
+
+La descomposición de valores singulares (SVD) es una técnica fundamental en álgebra lineal que descompone una matriz en tres matrices más simples. Para una matriz \( A \) de dimensiones \( m \times n \), la SVD se expresa como:
+
+\[ A = U \Sigma V^T \]
+
+Donde:
+- \( U \) es una matriz ortogonal de tamaño \( m \times m \).
+- \( \Sigma \) es una matriz diagonal de tamaño \( m \times n \) con los valores singulares de \( A \) en la diagonal, ordenados de mayor a menor.
+- \( V^T \) es la transpuesta de una matriz ortogonal \( V \) de tamaño \( n \times n \).
+
+Para aproximar la condición 2 de una matriz empleando la descomposición SVD (Singular Value Decomposition), puedes utilizar la siguiente fórmula:
+
+\[ {cond}_2(A) \approx \frac{\sigma_1}{\sigma_n} \]
+
+Donde \( \sigma_1 \) es el mayor valor singular y \( \sigma_n \) es el menor valor singular de la matriz \( A \). 
+
+En la descomposición SVD, los valores singulares están ordenados de mayor a menor en la diagonal de la matriz \( \Sigma \). Por lo tanto, \( \sigma_1 \) es el primer valor singular (el más grande) y \( \sigma_n \) es el último valor singular (el más pequeño).
+
+Esta aproximación es válida para matrices cuadradas y no singulares (matrices con inversa), 
+donde \( \sigma_n \) es distinto de cero. 
+
+\section*{Pregunta 6}
+
+La descomposicion PLU no da una aproximacion de la cond de una matriz , sin envargo se puede utilizar en el calculo de la misma ya que como bien sabemos esta es muy eficiente y precisa a la harao de hacer calculos con matrices y de buscar la inversa de una matriz , por lo que seria una herramienta poderosa para calcular la condición.
+
+\section*{Pregunta 7}
+
+
+\[
+A = \begin{bmatrix}
+4 & -3 & 6 & 8 \\
+1 & -2 & 7 & 9 \\
+5 & 8 & 9 & -4 \\
+3 & 2 & 7 & 1 \\
+\end{bmatrix}
+\]
+
+Si descomponemos A con la descomposicion SVD obtendremos las siguientes matrices:
+
+\begin{equation*}
+U = \begin{bmatrix}
+0.3713 & -0.5760 & -0.3679 & -0.6420 \\
+0.5688 & -0.1602 & 0.8105 & -0.0128 \\
+-0.6055 & -0.7877 & 0.1047 & 0.0669 \\
+-0.3986 & 0.1588 & 0.4448 & -0.7942 \\
+\end{bmatrix}
+\end{equation*}
+
+\begin{equation*}
+\Sigma = \begin{bmatrix}
+20.8745 & 0 & 0 & 0 \\
+0 & 10.5091 & 0 & 0 \\
+0 & 0 & 9.4213 & 0 \\
+0 & 0 & 0 & 2.3449 \\
+\end{bmatrix}
+\end{equation*}
+
+\begin{equation*}
+V^T = \begin{bmatrix}
+0.5260 & -0.4737 & 0.6214 & -0.3428 \\
+0.0832 & -0.7426 & -0.5786 & -0.3188 \\
+0.7674 & 0.4809 & -0.2532 & -0.3338 \\
+-0.3506 & -0.1783 & -0.4694 & -0.7714 \\
+\end{bmatrix}
+\end{equation*}
+
+Donde: \[ A=U\Sigma V^T \]
+
+a)Como $ {cond}_2(A) \approx \frac{\sigma_1}{\sigma_n}$ en este caso seria ${cond}_2(A) \approx \frac{20.8745 }{2.3449 }=8.90208538$\\
+
+b)
+\begin{equation*}
+A^{-1} = \begin{bmatrix}
+ 0.088 & 0.088 & -0.272 & 0.152 \\
+ 0.216 & -0.084 & -0.120 & -0.028 \\
+ -0.176 & 0.136 & 0.240 & 0.008 \\
+ -0.040 & -0.152 & 0.064 & -0.024 \\
+\end{bmatrix}    
+\end{equation*}
+
+Calcularemos la $cond_\infty(A)$
+\[cond_\infty(A)=\|A\|_\infty\|A^{-1}\|_\infty=9*0.240=2.160\]
+
+
+\bibliography{bibliography}
+\end{document}

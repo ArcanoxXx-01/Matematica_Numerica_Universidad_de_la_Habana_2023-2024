@@ -1,0 +1,122 @@
+\documentclass[a4paper,12pt]{article}
+
+\begin{document}
+\title{CP: 8}
+\author{Dario Lopez Falcon}
+\date{Marzo, 2024}
+\maketitle
+
+\section*{Pregunta 1 }
+ver en el .py
+\section*{Pregunta 2}
+Sea $E = O((b-a)^n)$ el error que se comete al calcular el valor de la integral por el método simple , si usamos 
+el metodo compuesto de N intervalos tendremos por cada intervalo $I_m$ haciendo el método simple que $E_m = O((\frac{b-a}{N})^n)$
+
+Como tenemos N intervalos la suma de los errores que se cometen al calcular todos ellos seria 
+\[E_c = E_1+ .... + E_N = N O((\frac{b-a}{N})^n) \]
+Como $h= \frac{b-a}{N}$ entonces $N= \frac{b-a}{h}$ y finalmente como $E_c= N*C*(\frac{b-a}{N})^n$ entonces 
+\[E_c = C \frac{b-a}{h} * h^n = C*(b-a) * h^{n-1}= O(h^{n-1})\]
+
+\section*{Pregunta 3}
+
+Para determinar cuántos subintervalos \( N \) son necesarios para obtener una aproximación de la integral con un error menor que una tolerancia predeterminada \( \epsilon \), podemos utilizar las fórmulas de error para cada método compuesto. La idea es encontrar el valor mínimo de \( N \) que cumpla con la condición \( Error < \epsilon \).
+
+1. Método del rectángulo:
+   El error para el método compuesto del rectángulo es de la forma \( O(h^2) \), donde \( h = \frac{b - a}{N} \). Por lo tanto, necesitamos que \( h^2 < \epsilon \), lo que implica \( N > \sqrt{\frac{b - a}{\epsilon}} \).
+
+2. Método del trapecio:
+   El error para el método compuesto del trapecio es de la forma \( O(h^2) \), donde \( h = \frac{b - a}{N} \). Similar al método del rectángulo, necesitamos que \( h^2 < \epsilon \), lo que implica \( N > \sqrt{\frac{b - a}{\epsilon}} \).
+
+3. Método del punto medio:
+   El error para el método compuesto del punto medio es de la forma \( O(h^3) \), donde \( h = \frac{b - a}{N} \). Entonces, necesitamos que \( h^3 < \epsilon \), lo que implica \( N > \left(\frac{b - a}{\epsilon}\right)^{\frac{1}{3}} \).
+
+4. Método de Simpson:
+   El error para el método compuesto de Simpson es de la forma \( O(h^4) \), donde \( h = \frac{b - a}{N} \). Entonces, necesitamos que \( h^4 < \epsilon \), lo que implica \( N > \left(\frac{b - a}{\epsilon}\right)^{\frac{1}{4}} \).
+
+Dado \( \epsilon \), podemos calcular el valor mínimo de \( N \) necesario para cada método compuesto utilizando las fórmulas anteriores. Es importante tener en cuenta que estos son límites inferiores, y es posible que necesites redondear hacia arriba para obtener un número entero de subintervalos.
+
+\section*{Pregunta 4}
+PREGUNTA SECRETA
+
+Las diferencias finitas son un enfoque numérico utilizado para aproximar derivadas y solucionar ecuaciones diferenciales mediante la discretización de los términos diferenciales. En lugar de trabajar directamente con las funciones continuas, se aproximan las derivadas utilizando diferencias entre los valores de la función en puntos discretos.
+
+Existen diferentes tipos de diferencias finitas, entre los que se incluyen:
+
+1. Diferencias hacia adelante: Aproxima la derivada de una función en un punto utilizando los valores de la función en ese punto y en un punto cercano hacia adelante.
+   
+2. Diferencias hacia atrás: Similar a las diferencias hacia adelante, pero utiliza un punto cercano hacia atrás en lugar de hacia adelante.
+   
+3. Diferencias centradas: Utiliza puntos cercanos tanto hacia adelante como hacia atrás para calcular la derivada, lo que proporciona una mejor aproximación y generalmente menos error que las diferencias hacia adelante o hacia atrás.
+   
+Estas diferencias se aplican en el contexto de un espacio discreto, donde los puntos están separados por un paso fijo \( h \). Al utilizar diferencias finitas, se puede discretizar una ecuación diferencial para obtener un sistema de ecuaciones algebraicas que se pueden resolver numéricamente. Esto es útil cuando no se puede encontrar una solución analítica o cuando se desea una solución aproximada para casos complejos. Las diferencias finitas se utilizan ampliamente en campos como la física, la ingeniería y las ciencias computacionales para modelar y simular una variedad de fenómenos físicos y matemáticos.
+
+
+ver respuesta en el .py
+\section*{Pregunta 5}
+
+Para demostrar estas afirmaciones, primero necesitamos revisar la forma del polinomio de interpolación en la interpolación de Lagrange. Supongamos que tenemos \( n+1 \) puntos \( (x_0, f(x_0)), (x_1, f(x_1)), ..., (x_n, f(x_n)) \), y queremos encontrar un polinomio de grado \( n \) que pase por estos puntos. El polinomio de interpolación de Lagrange se define como:
+
+\[ P(x) = \sum_{i=0}^{n} f(x_i) \cdot L_i(x) \]
+
+Donde \( L_i(x) \) es el término de Lagrange dado por:
+
+\[ L_i(x) = \prod_{\j=0 \\ j \neq i}^{n} \frac{x - x_j}{x_i - x_j} \]
+
+a) Para la primera aproximación utilizando dos puntos, \( (x_0, f(x_0)) \) y \( (x_0 + h, f(x_0 + h)) \), el polinomio de interpolación de Lagrange es:
+
+\[ P(x) = f(x_0) \cdot \frac{x - (x_0 + h)}{x_0 - (x_0 + h)} + f(x_0 + h) \cdot \frac{x - x_0}{(x_0 + h) - x_0} \]
+
+Simplificando esto, obtenemos:
+
+\[ P(x) = \frac{f(x_0) \cdot (x - x_0 - h) - f(x_0 + h) \cdot (x - x_0)}{h} \]
+
+Ahora, tomemos la derivada de este polinomio en \( x_0 \):
+
+\[ P'(x_0) = \frac{f(x_0 + h) - f(x_0)}{h} \]
+
+Esta es precisamente la primera aproximación de la derivada utilizando diferencias finitas hacia adelante. Y como sabemos, el error de esta aproximación es \( O(h) \).
+
+b) Para la segunda aproximación utilizando tres puntos, \( (x_0 - h, f(x_0 - h)), (x_0, f(x_0)), (x_0 + h, f(x_0 + h)) \), el polinomio de interpolación de Lagrange es:
+
+\[ P(x) = f(x_0 - h) \cdot \frac{(x - x_0)(x - (x_0 + h))}{(x_0 - x_0)(x_0 - (x_0 + h))} + f(x_0) \cdot \frac{(x - (x_0 - h))(x - (x_0 + h))}{(x_0 - (x_0 - h))(x_0 - (x_0 + h))} + f(x_0 + h) \cdot \frac{(x - (x_0 - h))(x - x_0)}{(x_0 + h - (x_0 - h))(x_0 + h - x_0)} \]
+
+Simplificando, obtenemos:
+
+\[ P(x) = \frac{f(x_0 - h) \cdot (x - x_0)(x - (x_0 + h)) + f(x_0) \cdot (x - (x_0 - h))(x - (x_0 + h)) + f(x_0 + h) \cdot (x - (x_0 - h))(x - x_0)}{-h^2} \]
+
+Ahora, tomemos la segunda derivada de este polinomio en \( x_0 \):
+
+\[ P''(x_0) = \frac{f(x_0 - h) - 2f(x_0) + f(x_0 + h)}{h^2} \]
+
+Esta es la segunda aproximación de la derivada utilizando diferencias finitas centradas. Y como sabemos, el error de esta aproximación es \( O(h^2) \).
+
+c) Si la función se interpola en tres puntos \( (x_0 - h, f(x_0 - h)), (x_0, f(x_0)), (x_0 + h, f(x_0 + h)) \), y se deriva el polinomio de interpolación, obtenemos el siguiente polinomio:
+
+\[ P'(x) = \frac{f(x_0 + h) - f(x_0 - h)}{2h} \]
+
+Si evaluamos este polinomio en los puntos \( x_0 \) y \( x_0 + 2h \), obtenemos las aproximaciones de la derivada en esos puntos.
+
+d) El error en cada caso es el orden de magnitud del término de error omitido en la aproximación de la derivada. En el caso a), el error es \( O(h) \), mientras que en el caso b) el error es \( O(h^2) \).
+
+\section*{Pregunta 6}
+
+a) Los valores de los números \( w_i \) deben ser tales que la suma ponderada \( w_1 f(x_1) + w_2 f(x_2) + \ldots + w_n f(x_n) \) aproxime de manera exacta la integral definida para todas las funciones \( f_i(x) = x^i \) con \( i = 0, n \). 
+
+Para que esta aproximación sea exacta, se puede utilizar la regla del trapecio o la regla de Simpson, donde los \( w_i \) son coeficientes específicos que dependen del número de segmentos \( n \) en la aproximación.
+
+b) ver en el .py
+\section*{Pregunta 7}
+ver en el .py
+\section*{Pregunta 8}
+b) El error cometido al aproximar la integral por esta expresión depende del polinomio de interpolación utilizado y la función \( f(x) \). En general, el error aumenta a medida que se incrementa el número de puntos de interpolación \( n \), ya que el polinomio de interpolación puede tener dificultades para aproximar correctamente la función en el intervalo \([a, b]\).
+
+c) Para encontrar formulas de integracion basadas en 1, 2 y 3 puntos, simplemente puedes llamar a la funcion integral interpolacion con el numero correspondiente de puntos y calcular los errores comparando con la integral exacta si es conocida
+
+Seleccionar un valor de \( h \) adecuado es crucial para obtener una buena aproximación de la derivada. Si \( h \) es demasiado pequeño, puede introducirse un error de redondeo debido a la precisión finita de la representación numérica. Por otro lado, si \( h \) es demasiado grande, la aproximación puede volverse inexacta y no capturar adecuadamente el comportamiento local de la función en el punto de interés.
+
+El valor óptimo de \( h \) que minimiza el error de aproximación \( O(h^p) \) depende del orden \( p \) del error y la función particular que se está evaluando. Por lo tanto, encontrar el valor de \( h \) que minimiza este error garantiza una aproximación precisa de la derivada con la menor cantidad de error posible para un \( h \) dado.
+
+En resumen, seleccionar un valor de \( h \) que sea "el más apropiado" mediante la minimización del error de aproximación nos permite obtener una aproximación precisa de la derivada con la menor cantidad de error posible para un \( h \) dado, evitando así problemas de precisión numérica y garantizando una aproximación precisa incluso en entornos computacionales.
+
+\bibliography{bibliography}
+\end{document}

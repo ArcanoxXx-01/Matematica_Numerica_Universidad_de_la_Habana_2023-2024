@@ -1,0 +1,135 @@
+\documentclass[a4paper,12pt]{article}
+
+\begin{document}
+\title{CP\#1.00000000000000000000}
+\author{Dario Lopez Falcon}
+\date{Febrero, 2024}
+\maketitle
+
+\section*{Ejercicio \#1}
+Posibles Numeros(*Estos serian solo los numeroos positivos):
+\begin{itemize}
+    \item .100e-1 
+    \item .101e-1 
+    \item .110e-1
+    \item .111e-1
+    \item .100e0
+    \item .101e0
+    \item .110e0
+    \item .111e0
+    \item .100e1
+    \item .101e1
+    \item .110e1
+    \item .111e1
+\end{itemize}
+
+.100e-1 es el menor representable y el epsilon seria $2^{1-3}=0.25$
+
+\section*{Ejercicio \#2}
+
+(Truncamiento)
+
+\begin{center}
+    $a+b+c=.4523e^4+.2115e^{-3}+.2583e^1=.4523e^4+.0000e^4+.0002e^4=.4525e^4$ 
+\end{center}
+
+\newpage
+
+(redondeo al flotante mas cercano)
+
+\begin{center}
+    $a+b+c=.4523e^4+.2115e^{-3}+.2583e^1=.4523e^4+.0000e^4+.0003e^4=.4526e^4$ 
+\end{center}
+
+\section*{Pregunta Secreta :-)}
+
+R/Base decimal .
+
+\section*{Ejercicio \#3}
+
+a)R/ El valor de la parte izquierda se aproxima a uno ya que cuando 1/n sea menor que el epsilon de la
+maquina se representara como 0 y $(1+0)^n = 1.0$.
+
+b)R/ EL menor N que cumple para una aritmetica F=(b,p,m,M) seria el menor $n<1/e$ donde e es el epsilon de dicha aritmnetica.
+
+c)R/ Converge a 0.1000...e1 a partir del mismo n del inciso anterior.
+\section*{Ejercicio \#4}
+
+$fl(1 + n)=1 <=>$ 
+
+a) $n < b^{k-p}$ (Truncamiento)
+
+b) $n < \frac{b^{k-p}}{2} $ (Aproximacion al flotante mas cercano)
+
+*En este caso el espaciamiento es $b^(1-p)$ que es igual al epsilon de la maquina
+
+\section*{Ejercicio \#5}
+
+$fl(b^n + x)=b^n$
+
+Sea $d=b^{k-p}$ (El espaciamiento de $b^n$) $=> d=b^{n-p}$
+
+a) $x < d$ (Truncamiento)
+
+b) $x < d/2$ (Aproximacion al flotante mas cercano)
+
+\section*{Ejercicio \#6}
+
+F=(10,3,-5,5)
+
+$S1=1+\sum_{1}^{n}0.001 $
+
+$S2=\sum_{1}^{n}0.001 +1$
+
+R/ S1 = 1 ya que 1+0.001 = 0.100e1 + 0.100e-2 = 0.100e1 + 0.000e1 = 0.100e1 (pierde informacion)
+En cambio S2=2 ya que 0.001 + 0.001 = 0.100e-2 + 0.100e-2 = 0.200e-2 (no pierde informacion).
+
+\section*{Ejercicio \#7}
+
+R/ Para n=p ya que $b^{-n}=0.100...e^{-p} = 0.00... =0$
+
+\section*{Ejercicio \#8}
+
+R/ $ \{ \forall (N,n)| N\in \mathbf{N}  \land   n >= p \} $
+
+\section*{Pregunta Secreta 20 000boniatos :-)}
+
+R/ Oooh! Obviamente la antesala de "hasta que se seque el malecon" 
+
+\section*{Pregunta Secreta 35 000 boniatos + 5000 por encontrarla $( \odot  \smile \odot )$}
+R/ El estandar IEEE-754 es la norma o estandar tecnico empleado para la computacion de punto flotante
+con el objetivo de evitar problemas existentes en las diveresas formas de imolementacion de punto flotante 
+que hacian que fueran poco fiables y no reutilizables.
+
+\section*{Ejercicio \#9}
+
+a)
+R/ Esto se debe a que en el estandar IEEE-754 como los numeros solo se pueden representar con una presicion finita
+por lo que muchos no se pueden guardar de manera exacta y se pierde informacion como pasa al sumar un numero 
+con otro que es muy pequeño en comparacion al primero, al punto que se podria considerar despresiable por lo que hay muchos
+casos en que la respuesta difiere grandemente del valor esperado como es el caso de :
+ 
+\begin{center}
+    $1e100 + 1e50 = 1e100$
+\end{center}
+
+ya que 1e50 es tan 
+pequeño repecto a 1e100 que llega a ser despreciable y sin embargo el error en esteande. caso seria de 10e50 que es un numero bien grande.
+
+
+b) y c)En estos pasa algo parecido y es que como dijimos hay muchos numeros que no se pueden representar de manera exacta, por 
+lo que al realizar operaciones con estos los resultados tampoco van a dar exactos.Tambien puede darse el caso en que se opera 
+con dos numeros que si se pueden representar de manera exacta y sin envalgo el resultado a lo mejor no se pueda representar de manera exacta.
+
+\section*{Ejercicio \#10}
+
+R/Como ya dijimos al operar con numeros que no se representan de manera exacta siempre existe una mayor perdida de informacion 
+en comparacion a si lo haecmos con numeros que si se representen de manera exacta donde es muy probable que no exista perdida de informacion
+o que si existe sea minima ,como es el caso del 30 que da el valor esperado sin perder infomacion.
+
+\section*{Ejercicio \#11}
+
+Ver codigo en respuestas.py
+
+\bibliography{bibliography}
+\end{document}

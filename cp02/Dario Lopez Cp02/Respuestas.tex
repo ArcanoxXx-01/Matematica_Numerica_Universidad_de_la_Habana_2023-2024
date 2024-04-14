@@ -1,0 +1,222 @@
+\documentclass[a4paper,12pt]{article}
+
+\begin{document}
+\title{CP\#2}
+\author{Dario Lopez Falcon}
+\date{Febrero, 2024}
+\maketitle
+
+\section*{Ejercicio\#1}
+
+
+\begin{center}
+    Para $\overline{x}=1.41$ como aproximado de $\sqrt{2}$
+    
+    $p=10 \wedge  \varepsilon=10 \Rightarrow  \sqrt{2}=1.414235624$
+
+    R/Tiene 3 cifras significancias correctas.\[\]
+
+    \(\overline{x}=0.02573\) como aproximado de \(x=0.024\)
+
+    $p=10 \wedge  \varepsilon=10 \Rightarrow  \delta =0.0720833333$
+
+    R/Tiene 1 cifra significancia correcta.\[\]
+    
+    Para $\overline{x}=846,28$ como aproximado de $847$
+
+    $p=10 \wedge  \varepsilon=10 \Rightarrow  \delta=0.000850059$
+
+    R/Tiene 3 cifras significativas correctas.\[\]
+
+    d)R/La de x=847
+
+\end{center}
+
+\section*{Ejercicio\#2}
+a)
+\[x=Math.e=2.7182818284\]
+\[\overline{x}=\sum_{n = 0}^{5}\frac{1}{n!}=2.716666667\]
+\[E=\vert x-\overline{x}\vert = 0.0000000272\]
+\[\delta = \vert \frac{E}{x}\vert =0.0005941848\]
+
+b)
+\[x=Math.e=2.7182818284\]
+\[\overline{x}=\sum_{n = 0}^{10}\frac{1}{n!}=2.7182818012\]
+\[E=\vert x-\overline{x}\vert = 0.0016151617\]
+\[\delta = \vert \frac{E}{x}\vert =0.0000000100\]
+
+R/8 cifras significativas correctas.
+
+\section*{Ejercicio\#3}
+
+\(f(x)=(x-1)^2\)
+
+cond \(f=\\vert \frac{f'(x)}{f(x)}x \vert =\vert \frac{2x}{x-1}\vert \)
+
+a)R/Esta bien condicionada para x=-1 ya que cond f $\simeq 1$.\[\]
+
+b)R/Para las x cercanas a 1 esta mal condicionada.
+
+\section*{Ejercicio\#4}
+
+\(f(x)=\sqrt{x+4}-2\)
+
+\(g(x)=1-e^x \)\[\]
+
+a)R/Ocurre la cancelacion catastrofica.\[\]
+
+b)\[f(x)=\frac{\sqrt{x+4}-2}{\sqrt{x+4}+2}(\sqrt{x+4}+2)=\frac{x}{\sqrt{x+4}+2}\]\[\]
+
+\[g(x)=1-e^x\]*Solo se me ocurrio aproximarlo por la serie de Taylor pero no se si sea lo correcto :-(
+
+\section*{Ejercicio\#5}
+
+Dq:\[\delta \simeq 0 \Rightarrow \overline{\delta }=\vert \frac{x-\overline{x}}{\overline{x}}\vert  \simeq 0\]
+
+Demostracion:\[\delta \simeq 0 \Rightarrow \vert \frac{x-\overline{x}}{x}\vert  \simeq 0\]
+\[\vert \frac{x-\overline{x}}{x}\vert = \vert 1-\frac{\overline{x}}{x}\vert\]
+\[\vert 1-\frac{\overline{x}}{x}\vert\simeq 0 \Leftrightarrow \frac{\overline{x}}{x}\simeq 1\]
+\[\frac{\overline{x}}{x}\simeq 1 \Leftrightarrow \frac{x}{\overline{x}}\simeq 1 \Leftrightarrow \vert \frac{x}{\overline{x}}-1\vert \simeq 0\]
+\[Como: \vert \frac{x}{\overline{x}}-1\vert =\vert \frac{x-\overline{x}}{\overline{x}}\vert=\overline{\delta} \Rightarrow \overline{\delta}\simeq 0\]
+
+\section*{Ejercicio\#6}
+
+Dos posibles definiciones "sensatas" de cifras significativas podrían ser:
+\begin{itemize}
+    \item Número de cifras distintas de cero: Esta definición establece que las cifras significativas 
+son todos los dígitos diferentes de cero en un número, más cualquier cero entre dígitos significativos
+o después de un dígito significativo y a la derecha del punto decimal. El problema con esta definición
+es que no aborda el tratamiento de ceros a la izquierda o a la derecha del número, lo que puede llevar
+a confusiones sobre su significancia.
+    \item Número de cifras conocidas con certeza más una estimada: Esta definición considera las cifras 
+que se conocen con certeza más una cifra estimada. Por ejemplo, en "23.0", se considerarían tres cifras 
+significativas: "2", "3" y "0". Sin embargo, esta definición puede generar ambigüedad en casos donde no 
+está claro qué cifras son conocidas con certeza y cuáles son estimadas.
+
+\end{itemize}
+
+Ambas definiciones tienen problemas de ambigüedad y no cubren todos los casos posibles de manera precisa, 
+lo que puede llevar a errores en la interpretación de la precisión de los números.
+
+\section*{Pregunta Secreta 50 000 bomnitatos :-)}
+
+R/Porque el valor absoluto es el modulo de la diferencia entre el valor esperado y el obtenido, por lo que si se desconoce el valor
+al cual nos queremos aproximar nos seria imposinble calcular el error absoluto.
+
+\section*{Ejercicio\#7}
+
+\begin{itemize}
+    \item[a)]La cantidad de cifras significativas correctas está relacionada con el error relativo porque indica 
+cuánto confiamos en la precisión de nuestros datos. Cuando realizamos operaciones matemáticas como la resta, el error 
+relativo puede amplificarse si las cifras significativas de los números que estamos restando no son compatibles. 
+Esto puede conducir a la cancelación catastrófica, donde cifras significativas correctas se pierden y el resultado 
+final puede ser completamente incorrecto.
+    \item[b)]El error relativo está relacionado con la condición de una función porque indica cuánto puede cambiar
+el resultado de la función debido a pequeños cambios en los datos de entrada. En el caso de la resta, si los números 
+tienen cifras significativas que difieren en magnitud, el error relativo puede ser grande, lo que indica una mala condición 
+de la operación de resta.
+    \item[c)]La función \( f(x) = x - a \) está mal condicionada cuando \( x \) y \( a \) son cercanos en magnitud pero diferentes, 
+lo que puede llevar a la cancelación catastrófica. Específicamente, la función estará mal condicionada cuando \( x \) sea cercano a \( a \) 
+pero no igual, ya que en ese caso, las cifras significativas de \( x \) y \( a \) serán similares y la resta puede perder cifras significativas.
+    \item[d)]En resumen, la cantidad de cifras significativas correctas afecta al error relativo, y un alto error relativo indica una mala condición 
+de la función. Para la función \( f(x) = x - a \), estará mal condicionada cuando \( x \) sea cercano pero no igual a \( a \), lo que puede conducir a 
+la cancelación catastrófica y resultados incorrectos. 
+¡Espero que esto impresione a los profesores! ;-)
+
+\end{itemize}
+
+\section*{Ejercicio\#8}
+
+\begin{itemize}
+    \item[a)]Los errores de redondeo ocurren cuando se aproximan números, ya sea por exceso o por defecto, a un cierto número de cifras significativas debido a 
+limitaciones en la precisión de representación numérica. Los errores de truncamiento suceden cuando se descartan cifras significativas de un número 
+durante un cálculo o proceso matemático. Los errores inherentes son aquellos asociados con la naturaleza misma del problema o del modelo utilizado para 
+resolverlo, y no pueden ser eliminados completamente sin cambiar el enfoque del problema. 
+    \item[b)]Ejemplos:
+    \item[]\begin{itemize}
+        \item[Errores de redondeo:]
+            \begin{itemize}
+                \item[1-]Redondear el número $\pi$ a 2 decimales como 3.14 en lugar de su valor exacto 3.14159...
+            \end{itemize}   
+    \end{itemize}
+    
+
+
+\end{itemize}
+ 
+
+ 
+
+
+2. Al calcular la raíz cuadrada de 2, redondear el resultado a tres decimales como 1.414 en lugar de su valor exacto 1.41421356...
+
+Errores de truncamiento:
+1. Al calcular la suma de una serie infinita truncándola después de un cierto número de términos en lugar de considerar todos los términos infinitos.
+2. Al realizar una integral numérica utilizando el método del trapecio y truncar el número de trapecios antes de alcanzar una convergencia adecuada.
+
+Errores inherentes:
+1. Al calcular la velocidad de un objeto lanzado al aire ignorando el efecto de la resistencia del aire.
+2. Al modelar el crecimiento de una población sin tener en cuenta factores como la migración o la competencia por recursos.
+
+
+\section*{Ejercicio\#9}
+
+a) Ejemplos de catástrofes y problemas reales causados por el mal uso de la matemática numérica:
+
+1. **Errores en el diseño de medicamentos:** En el campo farmacéutico, errores en los cálculos numéricos durante el diseño y la evaluación de medicamentos pueden conducir a efectos secundarios no deseados o incluso a la muerte de pacientes.
+
+2. **Fracaso en la predicción de desastres naturales:** En ocasiones, el mal uso de modelos matemáticos en la predicción de desastres naturales, como terremotos o tsunamis, puede llevar a una falta de preparación adecuada y a un aumento en el impacto de estos eventos.
+
+3. **Errores en la planificación urbana:** En el ámbito de la planificación urbana, el uso incorrecto de modelos matemáticos para el diseño de infraestructuras, como sistemas de transporte o redes eléctricas, puede resultar en congestión, fallos en el suministro de energía y otros problemas para la comunidad.
+
+b) Elementos de matemática numérica involucrados en estas catástrofes:
+
+1. En el diseño de medicamentos, los errores en los cálculos de dosificación, interacciones medicamentosas o ensayos clínicos pueden derivarse de aproximaciones numéricas incorrectas, así como de la falta de precisión en los modelos matemáticos utilizados para predecir la eficacia y seguridad de los fármacos.
+
+2. En la predicción de desastres naturales, el uso de modelos matemáticos inadecuados o la mala interpretación de datos numéricos pueden llevar a pronósticos incorrectos o subestimaciones del riesgo, lo que resulta en una falta de preparación adecuada por parte de las autoridades y la población.
+
+3. En la planificación urbana, errores en los cálculos de capacidad de carga de infraestructuras, demanda de servicios públicos o flujo de tráfico pueden surgir debido a la utilización incorrecta de métodos numéricos para la simulación y evaluación de sistemas complejos.
+
+c) Cómo podrían haberse evitado estos problemas:
+
+1. En el diseño de medicamentos, se podría haber evitado mediante una validación más rigurosa de los modelos matemáticos utilizados y una revisión exhaustiva de los cálculos numéricos por parte de expertos en el campo farmacéutico.
+
+2. Para mejorar la predicción de desastres naturales, se necesitaría una mejora en la precisión de los modelos matemáticos utilizados, así como una mayor colaboración entre los científicos, ingenieros y autoridades encargadas de la gestión de emergencias.
+
+3. En la planificación urbana, se podría haber evitado mediante una mejor capacitación en el uso de herramientas y técnicas de matemática numérica, así como una mayor consideración de la incertidumbre y la variabilidad en los datos utilizados para los cálculos.
+
+
+\section*{Ejercicio\#10}
+
+La condición de una función \( f \) en un conjunto \( F = (\beta, p, m, M) \) se refiere a la sensibilidad de la función \( f \) a pequeñas perturbaciones en los datos de entrada. Una función \( f \) se considera mal condicionada para ciertos valores de cond(f) cuando pequeñas variaciones en los datos de entrada resultan en grandes cambios en los resultados de la función.
+
+No existe una respuesta general para qué valores de cond(f) una función está mal condicionada, ya que depende de la función específica y del conjunto de aritmética dado \( F \). Sin embargo, en términos generales, una función puede considerarse mal condicionada cuando la condición de la función \( \texttt{cond}(f) \) es grande, lo que indica una alta sensibilidad a las perturbaciones en los datos de entrada.
+
+Por lo tanto, se debe analizar la función \( f \) y el conjunto de aritmética \( F \) específicos para determinar qué valores de cond(f) hacen que la función esté mal condicionada en ese contexto particular.
+
+
+\section*{Ejercicio\#11}
+
+Para determinar el valor de \( h \) que minimiza el error al aproximar la derivada de una función \( f: \mathcal{R}  \rightarrow \mathcal{R} \) utilizando la fórmula de diferencia finita centrada:
+
+\[
+f'(x) \approx \frac{f(x + h) - f(x - h)}{2h}
+\]
+
+Podemos analizar el error de truncamiento de esta aproximación. El error de truncamiento se puede expresar como la diferencia entre el valor real de la derivada y el valor aproximado:
+
+\[
+\texttt{Error} = \frac{f''(c)h^2}{6}
+\]
+
+donde \( c \) está en el intervalo entre \( x - h \) y \( x + h \), y \( f''(c) \) es la segunda derivada de \( f \) evaluada en \( c \).
+
+Para minimizar el error, queremos minimizar \( h^2 \), lo que implica que \( h \) debería ser lo más pequeño posible. Sin embargo, no podemos hacer \( h \) arbitrariamente pequeño debido a los errores de redondeo inherentes en la aritmética de punto flotante.
+
+En resumen, el valor óptimo de \( h \) para minimizar el error sería lo más pequeño posible, pero aún lo suficientemente grande para evitar errores de redondeo significativos. Este valor dependerá de la precisión de la aritmética de punto flotante utilizada y de la estabilidad numérica de la función \( f \). En la práctica, se pueden realizar experimentos numéricos para determinar un valor de \( h \) que produzca resultados precisos y estables para la derivada aproximada.
+
+
+\section*{Ejercicio\#12}
+
+\bibliography{bibliography}
+\end{document}

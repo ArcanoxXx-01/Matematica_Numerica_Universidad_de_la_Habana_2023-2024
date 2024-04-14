@@ -1,0 +1,188 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\begin{document}
+\title{CP\#6}
+\author{Dario Lopez Falcon}
+\date{Marzo, 2024}
+\maketitle
+\section*{Ejercicio 1: ¡Plagio! :-o (30000 créditos) }
+
+¿Qué obra de la literatura mundial es una plagio burdo y descarado del documento con la “conferencia” de este tema?\\ \\
+
+R/ El principito (Siempre ha sido de mis libros favoritos ($\odot \smile \odot $) )
+
+\section*{Ejercicio 2: . . . Y ¿solo uno? para interpolarlos a todos. . . (60000 créditos)}
+
+Dada la siguiente tabla con valores conocidos de una función f (x):
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+x & 1 & 2 & 3 & 4\\
+\hline
+f(x) & 2 & 1 & 6 & 47\\
+\hline
+\end{tabular}
+\end{table}
+
+a) Usando las funciones apropiadas de numpy, verifique que los polinomios:
+\[p(x) = 5x3 - 27x2 + 45x - 21,\]
+\[q(x) = x4 - 5x3 + 8x2 - 5x + 3\]
+satisfacen la condición de interpolación para los datos de la tabla2 .\\
+b) Explique por qué no se viola la unicidad del polinomio de interpolación.\\\\
+a)R/Ver respuestas.py\\\\
+b)R/ Porque los polinomios tienen grado distinto , ademas el unico polinomio de grado 3 que cumple es p
+
+\section*{Ejercicio 3: Para justificar el ejercicio anterior (80 000 créditos)}
+
+Demuestre que dado un conjunto de puntos de la forma ${(xi , yi ), i = \overline{0, n}}$, existe un único polinomio
+de grado n que los interpola.
+
+
+Demostración de Existencia:
+
+Utilizando el método de interpolación de Lagrange
+
+Base de Lagrange
+\[L_i(x)=\prod_{j \neq i}\frac{x-x_j}{x_i-x_j} \]
+
+y sea el polinomio $p(x)=\sum y_i L_i(x)$  y utilizando la demostración del ejercicio 4 tenemos
+
+\[L_i(x_j)=0 si   i\neq j \]
+\[L_i(x_j)=1 si   i=j \]
+
+Luego $p(x_i)= y_i L_i(x_i) +\sum_{j \neq i} x_jL_j(x_i)= y_i L_i(x_i)= y_i$
+
+De donde hemos encontrado un polinomoio que cumple con las condiciones de interpolacion
+
+Demostracion de unicidad
+
+Supongamos que existen dos polinomios p(x) y q(x) de grado n distintos que cumplen las condiciones de interpolacion y sea el polinomio $h(x)=p(x)-q(x)$ entonces como p y q son de grado n el grado maximo de h es n tambien.
+Como $p(x_i)=q(x_i) i= \overline{0,n}$ entonces $h(x_i)=p(x_i)-q(x_i)=0$
+de donde h tendria al menos n+1 raíces . Absurdo pues $gr(h) \leq n$. Luego el polinomio de interpolacion de grado n es unico
+
+
+\section*{Ejercicio 4: Otra demostración fácil. (80 000 créditos)}
+
+Dados los polinomios de la base de Lagrange $L_{i,n}(x)$:
+\[ L_{i,n}(x) = \prod_{j \neq i} \frac{(x - x_j)}{(x_i - x_j)}, \]
+para interpolar un conjunto de puntos $(x_i, f(x_i))$, demuestre que
+\[ L_{i,n}(x_k) = \begin{cases} 1, i = k \\ 0, i  \neq k \end{cases}. \]
+
+R/Para demostrar que \( L_{i,n}(x_k) = \delta_{ik} \), donde \( \delta_{ik} \) es la delta de Kronecker que vale 1 si \( i = k \) y 0 en caso contrario, podemos observar que el polinomio de Lagrange \( L_{i,n}(x) \) es cero en todos los puntos \( x_j \) excepto en \( x_i \), donde vale 1. Entonces:
+
+- Cuando \( i = k \), el término \( (x_k - x_k) \) en el numerador de \( L_{i,n}(x_k) \) será cero, mientras que todos los otros términos en el producto serán diferentes de cero. Por lo tanto, \( L_{i,n}(x_k) = 1 \).
+
+- Cuando \( i \neq k \), en \( L_{i,n}(x_k) \) habrá un término \( (x_k - x_j) \) en el numerador donde \( j \) no es igual a \( k \), por lo que el producto completo será cero.
+
+Así, hemos demostrado que \( L_{i,n}(x_k) = \delta_{ik} \).
+
+\section*{Ejercicio 5: Un ejercicio de sistemas de ecuaciones lineales. (80 000 créditos)}
+
+Dado un conjunto de puntos de la forma ${(xi , yi ), i = \overline{1, n}}$ escriba una función en Python que
+calcule los coeficientes del polinomio de interpolación usando la base canónica
+
+R/Ver respuestas.py\\\\
+
+\section*{Ejercicio 6: Un ejercicio simbólico. (100 000 créditos)}
+
+Dado un conjunto de puntos de la forma ${(xi , yi ), i = \overline{1, n}}$ escriba una función en Python que
+devuelva la expresión analitica del polinomio de interpolación de Lagrange para esos puntos.
+
+R/Ver respuestas.py\\\\
+
+\section*{Ejercicio 7: Divide y diferencia. (100 000 créditos)}
+
+Dado un conjunto de puntos de la forma {(xi , yi ), i = 1, n}, implemente una función en Python
+que calcule, de la manera más eficiente posible, los valores de las diferencias divididas de Newton
+para esos puntos.
+
+R/Ver respuestas.py\\\\
+
+\section*{Ejercicio 8: Los tres mosqueteros en acción. (150 000 créditos)}
+
+Dado un conjunto de puntos de la forma {(xi , yi ), i = 1, n}, utilice sus respuestas a los ejercicios
+anteriores para obtener las expresiones analiticas de los polinomios de interpolación usando la base
+canónica, la base de Lagrange y la base de Newton para para los siguientes datos:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+x & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+\hline
+y & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 \\
+\hline
+\end{tabular}
+\end{table}
+
+R/Ver respuestas.py\\\\
+
+\section*{Ejercicio 9: ¿Y si las derivadas también se conocen? (200 000 créditos)}
+
+Dado un conjunto de puntos $\{(x_i, y_i, y'_i), i = \overline{ 1, n}\}$, donde $x_i$ son las coordenadas de los puntos, $y_i = f(x_i)$, y $y'_i = f'(x_i)$, para una función $f(x)$ desconocida,
+
+a) Diga cómo pudiera hallarse un polinomio $p(x)$, tal que:
+\[ p(x_i) = f(x_i), \forall i =\overline{ 1, n} \]
+\[ p'(x_i) = f'(x_i), \forall i = \overline{ 1, n} \]
+
+b) ¿Cuál es la manera más eficiente de construir este polinomio?
+
+c) Implemente una función en Python que dado un conjunto de puntos y sus derivadas, permita construir un polinomio que interpole tanto los valores de la función como los de las derivadas.
+
+Para hallar un polinomio \( p(x) \) que satisfaga las condiciones dadas, podemos utilizar el método de interpolación de Hermite. Este método permite interpolar tanto los valores de la función como sus derivadas en un conjunto de puntos dados.
+
+a) Para hallar el polinomio \( p(x) \), utilizamos los valores de la función y sus derivadas para construir un sistema de ecuaciones que debe ser satisfecho por el polinomio. Dado que queremos que el polinomio pase por los puntos dados y tenga las mismas derivadas, necesitamos dos condiciones para cada punto: una para el valor de la función y otra para la derivada. Luego, utilizamos estos puntos para formar el polinomio de Hermite.
+
+b) La manera más eficiente de construir este polinomio es utilizando el método de interpolación de Hermite. Este método aprovecha las diferencias divididas de Newton para calcular las diferencias divididas de las derivadas, lo que permite construir el polinomio de manera más eficiente que si se calcularan por separado.
+
+c) ver respuesta en el .py
+
+\section*{Ejercicio 10: rrrrrrrrrrrrRRRRRRRRRRRRrrrrrrrrrrrr (300 000 créditos)}
+
+Se desea medir el comportamiento de una motocicleta de carrera, para lo cual se decidió observar
+la velocidad y la distancia recorrida cada cierto tiempo, obteniéndose asi la siguiente tabla:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c||c|c|c|c|c|}
+\hline
+t(s)  &  0 &  3 & 5 & 8 & 13 \\
+\hline
+s(m) & 0 & 225 &383 & 623 & 993 \\
+\hline
+v(m/s) & 275 & 77 & 80 & 74 & 72 \\
+\hline
+\end{tabular}
+\end{table}
+
+a) Utilice alguno de los algoritmos implementados por usted en el Ejercicio 8 para determinar
+cuánto habia recorrido la motocicleta después de 10s y cuál era su velocidad en ese momento.
+
+b) Utilice el algoritmo propuesto por usted en el ejercicio 9 para determinar los mismos valores.
+
+c) ¿Cuál cree usted que sea una mejor aproximación? ¿Por qué?
+
+La interpolación de Hermite es una mejor aproximación en este caso, ya que no solo ajusta los valores de la función en los puntos dados, sino también las derivadas. Esto significa que la velocidad estimada en \( t = 10 \) será más precisa, ya que también tendrá en cuenta cómo cambia la velocidad en función del tiempo.
+\section*{Ejercicio 11: Matemática Numérica y Literatura Fantástica.6 (200000
+créditos)
+}
+a) ¿Qué tienen en común la interpolación con polinomios de Lagrange y la saga de Harry Potter?\\
+b) ¿Cuál es la utilidad e importancia, de lo que tienen en común?
+
+a)En la saga de Harry Potter, cada libro es como un punto clave en la trama, mientras que el método de interpolación de Lagrange es como la magia que une esos puntos para crear una historia mágica y coherente. Así que podríamos decir que mientras Harry lucha contra Voldemort, Lagrange lucha contra el vacío de la incertidumbre, ¡y ambos utilizan sus propias fórmulas mágicas para triunfar!
+
+b)El método de Lagrange para la interpolación se considera "mágico" porque permite encontrar un polinomio único que pasa exactamente por los puntos dados, independientemente de la distribución de los puntos o el grado del polinomio. Esta capacidad de ajuste exacto lo hace muy útil en una variedad de campos, incluyendo:
+
+1. Aproximación de funciones desconocidas: Permite estimar valores de funciones en puntos intermedios entre datos conocidos, lo que es crucial en la extrapolación de datos.
+
+2. Análisis numérico: Facilita la simplificación de problemas matemáticos complejos al representar funciones complicadas con polinomios más simples.
+
+3. Modelado y simulación: Ayuda a crear modelos matemáticos que se ajusten a datos experimentales, lo que permite predecir comportamientos futuros o analizar sistemas complejos.
+
+4. Ingeniería y diseño: Es fundamental en el diseño de sistemas y dispositivos, ya que permite realizar cálculos precisos basados en datos experimentales limitados.
+
+En resumen, la "magia" del método de Lagrange radica en su capacidad para proporcionar una aproximación precisa de una función desconocida a partir de un conjunto de puntos discretos, lo que lo convierte en una herramienta invaluable en una amplia gama de aplicaciones científicas y tecnológicas.
+\end{document}

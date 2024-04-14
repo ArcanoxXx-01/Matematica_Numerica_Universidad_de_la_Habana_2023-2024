@@ -1,0 +1,237 @@
+\documentclass[a4paper,12pt]{article}
+
+\begin{document}
+\title{Matematica Numerica CP-02}
+\author{Darío López Falcón}
+\date{Febrero, 2024}
+\maketitle
+\section*{Ejercicio\#1}
+
+a,b)La factorización PLU de una matriz cuadrada y no singular \( A \) consiste en descomponerla en tres matrices: \( P \), \( L \) y \( U \), donde:
+
+- \( P \) es una matriz de permutación, es decir, una matriz que representa las operaciones de intercambio de filas necesarias para llevar a cabo la eliminación gaussiana.\\
+- \( L \) es una matriz triangular inferior con unos en la diagonal.\\
+- \( U \) es una matriz triangular superior.
+
+La factorización PLU es útil para resolver sistemas de ecuaciones lineales y calcular determinantes, ya que permite expresar la matriz original como el producto de tres matrices más simples. 
+Esto facilita la resolución de sistemas lineales y cálculos de determinantes, ya que las propiedades de las matrices triangulares son bien conocidas y fáciles de manipular.
+
+
+c)Para resolver un sistema de ecuaciones lineales (SEL) \( Ax = b \) utilizando la factorización PLU de la matriz \( A \), sigue estos pasos:\\
+
+1. Factorización PLU: Primero, calcula la factorización PLU de la matriz \( A \), es decir, encuentra las matrices \( P \), \( L \) y \( U \) tales que \( PA = LU \).\\
+
+2. Sustitución hacia adelante: Resuelve el sistema triangular inferior \( Ly = Pb \) utilizando sustitución hacia adelante para encontrar \( y \). Esto se hace fácilmente ya que \( L \) es una matriz triangular inferior con unos en la diagonal.\\
+
+3. Sustitución hacia atrás: Resuelve el sistema triangular superior \( Ux = y \) utilizando sustitución hacia atrás para encontrar \( x \). Esto también es simple ya que \( U \) es una matriz triangular superior.
+
+En resumen:
+
+- Paso 1: \( PA = LU \)\\
+- Paso 2: \( Ly = Pb \)\\
+- Paso 3: \( Ux = y \)\\
+
+Una vez que hayas encontrado \( x \), tendrás la solución al sistema de ecuaciones lineales \( Ax = b \).
+
+
+\section*{Ejercicio\#2}
+
+ver Respuesta.py
+
+\section*{Ejercicio\#3}
+
+a)
+Las estrategias de pivote son importantes en la factorización PLU y en otros algoritmos numéricos debido a varios motivos:
+
+1. Evitar la división por cero: Cuando se realiza la eliminación gaussiana, es posible que en algún momento se divida por un elemento muy cercano a cero. Las estrategias de pivote, como el pivote parcial o el pivote completo, ayudan a evitar esta situación seleccionando el elemento más adecuado como pivote, lo que reduce la posibilidad de obtener resultados inexactos debido a la división por números muy pequeños.
+
+2. Mejorar la estabilidad numérica: En algunos casos, la elección del pivote puede influir en la estabilidad numérica del algoritmo. Por ejemplo, el pivote parcial suele ser más estable que el pivote simple, ya que selecciona el elemento de mayor magnitud en cada paso, reduciendo así los errores acumulativos.
+
+3. Controlar el crecimiento del error: Las estrategias de pivote pueden ayudar a controlar el crecimiento del error durante el proceso de eliminación gaussiana. Una buena elección del pivote puede minimizar la propagación de errores numéricos, lo que resulta en una solución más precisa del sistema de ecuaciones lineales.
+
+En resumen, las estrategias de pivote son importantes porque contribuyen a la estabilidad y precisión de los algoritmos numéricos, ayudando a evitar errores numéricos y garantizando resultados confiables en la resolución de sistemas de ecuaciones lineales y otros problemas matriciales.
+
+b)
+
+Aquí tienes tres estrategias de pivote no triviales utilizadas en la eliminación gaussiana y otras técnicas de factorización de matrices:
+
+1. Pivote parcial: En esta estrategia, en cada paso de la eliminación gaussiana se selecciona como pivote el elemento de mayor magnitud en la columna actual. Esto ayuda a reducir los errores numéricos al minimizar la posibilidad de dividir por números muy pequeños. La desventaja es que puede requerir más tiempo de computación ya que implica buscar el pivote máximo en cada paso.
+
+2. Pivote completo: Esta estrategia implica seleccionar el pivote como el elemento más grande (en valor absoluto) dentro de toda la submatriz restante, es decir, no solo en la columna actual. Esto garantiza una mayor estabilidad numérica que el pivote parcial, pero también puede ser más costoso computacionalmente debido a la necesidad de buscar el pivote máximo en una región más grande de la matriz.
+
+3. Pivote de umbral: En esta estrategia, se elige un umbral o valor mínimo para los elementos de la diagonal principal que se consideran aceptables como pivotes. Si el elemento de la diagonal principal es menor que este umbral, se busca el elemento máximo en la columna (o en una región más grande, dependiendo de la variante) como pivote. Esta estrategia combina la eficiencia del pivote parcial con la estabilidad adicional proporcionada por el pivote completo en ciertos casos.
+
+Estas estrategias de pivote son fundamentales para mejorar la estabilidad y la precisión de los algoritmos de factorización de matrices, asegurando resultados confiables incluso en matrices con elementos de diferentes magnitudes o con potencial para causar errores numéricos.
+
+\section*{Ejercicio\#4}
+
+Esto se logra mediante un proceso conocido como pivoteo parcial implícito.
+
+El pivoteo parcial implícito consiste en realizar operaciones de pivoteo en la matriz \( A \) de manera virtual, es decir, sin necesidad de almacenar explícitamente las permutaciones. En su lugar, se realiza un seguimiento de las permutaciones aplicadas mediante un vector de enteros que indica el intercambio de filas realizado en cada paso.
+
+El proceso de factorización PLU con pivoteo parcial implícito sería similar al algoritmo convencional de eliminación gaussiana, pero en lugar de intercambiar filas explícitamente, se actualiza el vector de permutaciones. De esta manera, se logra obtener la factorización PLU sin necesidad de almacenar matrices adicionales para representar las permutaciones.
+
+En resumen, sí es posible obtener la factorización PLU de una matriz \( A \) utilizando solo la memoria que ocupa \( A \) y un vector de enteros de tamaño \( n \) para representar las permutaciones, gracias al pivoteo parcial implícito.
+
+\section*{Ejercicio\#5}
+
+La forma más eficiente y adecuada para resolver k SELs es con la descomposición PLU puesto que de esta forma se hace solamente una vez el algoritmo en $O(n^3)$ y se soluciona cada uno de los k sistemas de forma cuadrática mientras que si los resolvieramos todas las veces por Gauss entonces seria k veces de forma cúbica el algoritmo.
+
+\section*{Ejercicio\#6}
+
+a) Calcular $y = A ^{-1} x$ donde A y x son conocidos.
+
+Multiplicando por A por la izquierda y como $A A ^{-1} = I$ tenemos:
+
+\[A y = x \] 
+
+Y tenemos un SEL.
+
+b) Calcular $y = x^t A^{-1} B^{-1} x$ conociendo A , B y x.
+
+Primero multiplicaremos por el vector x por la izquierda y como $x x^t$ es un numero real lo llamaremos r y obtenemos:
+ \[x y = r A^{-1} B^{-1} x\]
+
+Multiplicando por A por la izquierda y como r es un numero cumple asociatividad tenemos:
+
+\[A x y = r B^{-1} x\]
+
+Repitiendo el procedimiento y multiplicando por B 
+\[B A x y = r x\]
+
+Y ya lo podemos resolver sin hacer uso de la inversa.
+
+\section*{Ejercicio\#7}
+
+a)
+Calcular la inversa de una matriz en programación puede causar errores debido a varios motivos:
+
+1. Matrices singulares: Si la matriz es singular, es decir, no tiene inversa, intentar calcular su inversa resultará en un error matemático o numérico. Esto puede ocurrir debido a la presencia de filas o columnas linealmente dependientes, lo que hace que la matriz sea no invertible. Los algoritmos de cálculo de inversa pueden no manejar adecuadamente esta situación, lo que resulta en resultados incorrectos o excepciones no manejadas.
+
+2. Pérdida de precisión numérica: Los cálculos numéricos involucrados en la inversión de matrices pueden sufrir de pérdida de precisión debido a la representación finita de los números en el computador. Esto puede llevar a errores de redondeo y a la propagación de errores numéricos, especialmente en matrices mal condicionadas o de gran tamaño. Como resultado, la inversa calculada puede no ser exactamente la inversa verdadera, lo que afecta la precisión de los cálculos posteriores que la utilizan.
+
+3. Costo computacional elevado: Calcular la inversa de una matriz puede ser computacionalmente costoso, especialmente para matrices grandes. Los algoritmos para calcular la inversa pueden tener una complejidad computacional alta y requerir una cantidad significativa de recursos computacionales y memoria. Esto puede afectar el rendimiento del programa, especialmente si se realiza repetidamente en matrices grandes o en un entorno con recursos limitados.
+
+b)
+
+1. Utilizar funciones de bibliotecas numéricas optimizadas: En la mayoría de los casos, la forma más confiable y eficiente de calcular la inversa de una matriz en programación es utilizar funciones de bibliotecas numéricas optimizadas, como las disponibles en NumPy para Python o en bibliotecas similares en otros lenguajes de programación. Estas funciones implementan algoritmos numéricamente estables y optimizados para manejar matrices de diferentes tamaños y propiedades.
+
+2. Verificar la singularidad de la matriz: Antes de intentar calcular la inversa de una matriz, es importante verificar si la matriz es singular (no invertible). Esto se puede hacer calculando su determinante y comprobando si es cero. Si la matriz es singular, intentar calcular su inversa resultará en un error numérico. En este caso, se pueden utilizar métodos alternativos, como la pseudo-inversa, si es necesario.
+
+\section*{Ejercicio\#8}
+
+a)
+Para una matriz simétrica y definida positiva \( A \), la descomposición de Cholesky \( A = LL^T \) garantiza que \( L \) sea una matriz triangular inferior con elementos en la diagonal positivos.
+
+La forma de los elementos de \( L \) en función de los elementos de \( A \) se obtiene mediante el siguiente algoritmo:
+
+1. Para la diagonal principal de \( L \):
+   - El elemento en la posición \( (i, i) \) de \( L \), es decir, \( L_{ii} \), se calcula como la raíz cuadrada del elemento correspondiente en \( A \), es decir, \( A_{ii} \).
+
+2. Para los elementos por debajo de la diagonal principal de \( L \):
+   - Para cada elemento \( L_{ij} \) con \( i > j \), se calcula utilizando la siguiente fórmula:
+     \[ L_{ij} = \frac{1}{L_{jj}} \left( A_{ij} - \sum_{k=1}^{j-1} L_{ik}L_{jk} \right) \]
+
+En resumen, los elementos de la matriz triangular inferior \( L \) en la descomposición de Cholesky de una matriz simétrica y definida positiva \( A \) se calculan utilizando la raíz cuadrada de los elementos diagonales de \( A \) para los elementos de la diagonal principal de \( L \), y mediante una combinación lineal de los elementos correspondientes de \( L \) para los elementos por debajo de la diagonal principal de \( L \).
+
+b)
+Si la matriz \( A \) no es simétrica, entonces la descomposición de Cholesky no se puede aplicar directamente, ya que este método requiere que la matriz sea simétrica y definida positiva. En este caso, es posible que la matriz no tenga una descomposición \( LL^T \) como la que se describe en la pregunta anterior.
+
+Cuando la matriz \( A \) no es simétrica, aún puede ser posible encontrar una descomposición similar, pero no necesariamente en la forma de \( LL^T \). Una opción es utilizar métodos de factorización de matrices más generales, como la factorización QR o la descomposición de valores singulares (SVD), que pueden aplicarse a cualquier tipo de matriz.
+
+En resumen, si la matriz \( A \) no es simétrica, la descomposición de Cholesky no se puede aplicar, y se necesitarán otros enfoques para descomponer la matriz en factores triangulares o de otra forma adecuada.
+
+c)
+
+La descomposición de Cholesky puede utilizarse para resolver sistemas de ecuaciones lineales (SEL) \( Ax = b \) donde la matriz \( A \) es simétrica y definida positiva. Aquí tienes un procedimiento básico para resolver un SEL utilizando la descomposición de Cholesky:
+
+1. Descomposición de Cholesky: Primero, calcula la descomposición de Cholesky de la matriz \( A \) para obtener la matriz triangular inferior \( L \) tal que \( A = LL^T \).
+
+2. Resolución del sistema \(Ly = b\): Utiliza la matriz triangular inferior \( L \) para resolver el sistema triangular \( Ly = b \) mediante sustitución hacia adelante para encontrar \( y \).
+
+3. Resolución del sistema \(L^Tx = y\): Utiliza la matriz triangular inferior \( L^T \) (es decir, la transpuesta de \( L \)) para resolver el sistema triangular \( L^Tx = y \) mediante sustitución hacia atrás para encontrar \( x \).
+
+4. Solución encontrada: Una vez que hayas encontrado \( x \), tendrás la solución al sistema de ecuaciones lineales \( Ax = b \).
+
+Este método aprovecha las propiedades de las matrices simétricas y definidas positivas para resolver eficientemente sistemas de ecuaciones lineales. La descomposición de Cholesky proporciona una forma eficiente de descomponer la matriz original en factores triangulares, lo que simplifica la resolución del sistema y reduce el costo computacional en comparación con otros métodos más generales.
+
+d)
+Se matiene siendo $n^3$ pero solo se analisa la mitad de la matriz ya que es simetrica.
+
+e)
+El método de Cholesky también se puede utilizar para determinar si una matriz simétrica \( A \) es definida positiva. Si la matriz es definida positiva, su descomposición de Cholesky dará como resultado una matriz triangular inferior \( L \) con elementos reales y positivos en su diagonal principal. Si la matriz no es definida positiva, la descomposición de Cholesky no será posible.
+
+Aquí está el proceso para determinar si una matriz simétrica \( A \) es definida positiva utilizando la descomposición de Cholesky:
+
+1. Calcula la descomposición de Cholesky de la matriz \( A \) para obtener la matriz triangular inferior \( L \) tal que \( A = LL^T \).
+
+2. Examina los elementos diagonales de la matriz \( L \). Si todos los elementos son positivos, entonces la matriz \( A \) es definida positiva. Si algún elemento es cero o negativo, entonces la matriz \( A \) no es definida positiva.
+
+3. Si todos los elementos diagonales son positivos, puedes estar seguro de que la matriz \( A \) es definida positiva. En caso contrario, la matriz no es definida positiva.
+
+En resumen, la descomposición de Cholesky proporciona una forma eficiente de determinar si una matriz simétrica es definida positiva al examinar los elementos diagonales de la matriz triangular inferior resultante. Si todos los elementos son positivos, entonces la matriz es definida positiva; de lo contrario, no lo es.
+
+\section*{Ejercicio\#9}
+
+a)
+Para demostrar que si \( A \) es una matriz cuadrada no singular y es posible aplicar el método de Gauss sin intercambiar filas o columnas, entonces \( A = LU \), donde \( L \) es una matriz triangular inferior con unos en la diagonal y \( U \) es una matriz triangular superior, procedemos de la siguiente manera:
+
+Dado que es posible aplicar el método de Gauss sin intercambiar filas o columnas, durante el proceso de eliminación gaussiana, obtendremos una matriz triangular superior \( U \) sin necesidad de realizar intercambios. Esto implica que cada paso de la eliminación consistirá en operaciones de eliminación que transformarán la matriz original \( A \) en una forma escalonada sin necesidad de cambiar el orden de las filas.
+
+Denotemos estas operaciones de eliminación como multiplicaciones por matrices elementales \( E_i \), donde \( i \) indica el paso de la eliminación. Entonces, podemos escribir:
+
+\[ A = E_1 E_2 \cdots E_k U \]
+
+Donde \( U \) es la matriz triangular superior resultante de la eliminación gaussiana.
+
+Ahora, dado que \( A \) es no singular, la eliminación gaussiana no conducirá a la introducción de ceros en la diagonal principal de \( U \). Esto implica que todas las matrices elementales \( E_i \) son matrices triangulares inferiores con unos en la diagonal principal (ya que solo actúan por debajo de la diagonal principal).
+
+Por lo tanto, el producto de matrices \( E_1 E_2 \cdots E_k \) también es una matriz triangular inferior con unos en la diagonal principal, que denotaremos como \( L \). Entonces, podemos escribir:
+
+\[ A = L U \]
+
+Donde \( L \) es una matriz triangular inferior con unos en la diagonal y \( U \) es una matriz triangular superior.
+
+Por lo tanto, hemos demostrado que si es posible aplicar el método de Gauss sin intercambiar filas o columnas, entonces \( A = LU \) donde \( L \) es una matriz triangular inferior con unos en la diagonal y \( U \) es una matriz triangular superior.
+
+b) Supongamos que hay dos descomposiciones distintas:
+$L_1 U_1$ y $L_2 U_2$ donde $L_1$ y $L_2$ son matrices triangulares inferiores cuyos elementos en la diagonal son unos y $U_1$ $U_2$ son matrices triangulares superiores. Entonces:
+
+\[ A = L_1 U_1 = L_2 U_2 \]
+
+Multiplicando por $U_1^{-1}$ (que es una matriz triangular superior) por la derecha tenemos:
+
+\[ L_1 U_1 U_1^{-1} = L_2 U_2 U_1^{-1}\]
+
+Como $U_1 U_1^{-1}$= $I$ tenemos:
+
+\[ L_1 = L_2 U_2 U_1^{-1}\]
+
+Como $U_2$ es una matriz triangular superior y $U_1^{-1}$ tambien lo es entonces su producto será una matriz triangular superior de donde haciendo $U_2 U_1^{-1} = B$ (con B triangular superior) tenemos:
+
+\[ L_1 = L_2 B\] 
+
+Si multiplicamos por $L_1^{-1}$ (que es una matriz triangular inferior con unos en la diagonal) por la izquierda tenemos:
+
+\[ L_1^{-1} L_1 =  L_1^{-1} L_2 B\] 
+
+Como $L_1^{-1}$ y $L_2$ son matrices triangulares inferiores cuyos elementos en la diagonal son unos entonces el producto tambien lo será , además llamaremos C a dicho producto.
+
+\[ I = C B\] 
+
+Como $C B = I$ entonces C es la inversa de B y como C es una matriz triangular inferior con unos en la diagonal y B es una matriz diagonal superior y conocemos que la inversa de una matriz diagonal superior es una matriz diagonal superior entonces necesariamente $B = C = I$
+
+Luego como $B = I$ entonces  $U_2 U_1^{-1} = I$ y $U_1^{-1}$ es la inversa de $U_2$ y ademas es la inversa de $U_1$ como la inversa es única $U_1 = U_2$. Análogamente $L_1 = L_2$ y como supusimos que eran distintas hemos llegado a un Absurdo de donde la descomposicion $A = L U$ es única.
+
+c)﻿
+Dado que \( A \) es una matriz cuadrada y no singular, su descomposición \( PLU \) existe y es única. Para demostrar esto, consideremos el proceso de eliminación de Gauss para triangularizar \( A \) con pivoteo parcial.
+
+1. **Pivoteo Parcial:**
+   Durante el proceso de eliminación de Gauss con pivoteo parcial, en cada paso \( k \), seleccionamos la fila con el mayor elemento en valor absoluto en la columna \( k \) y la intercambiamos con la fila \( k \). Esto se puede representar mediante una matriz de permutación \( P_k \) que realiza esta permutación. Multiplicar todas estas matrices de permutación \( P_k \) juntas nos dará la matriz de permutación total \( P \) para la descomposición \( PLU \).
+
+2. **Factorización LU:**
+   Después del pivoteo parcial, obtenemos una matriz triangular superior \( U \). La matriz \( L \) se obtiene mediante la multiplicación de las matrices inversas de las operaciones de eliminación que se realizaron durante el proceso de eliminación de Gauss. Estas operaciones de eliminación multiplican la matriz \( A \) por matrices elementales \( E_{ij} \), que son matrices identidad con elementos modificados para realizar las operaciones de eliminación. La matriz \( L \) es la inversa de la matriz acumulada de estas matrices elementales.
+
+Por lo tanto, la descomposición \( A = PLU \) existe para cualquier matriz cuadrada y no singular \( A \). Esto se debe a que el proceso de eliminación de Gauss con pivoteo parcial garantiza que podamos triangularizar \( A \) y las matrices de permutación, junto con las operaciones de eliminación, nos permiten obtener \( P \), \( L \) y \( U \) satisfaciendo la ecuación \( A = PLU \).
+\bibliography{bibliography}
+\end{document}
